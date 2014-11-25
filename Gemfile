@@ -4,4 +4,5 @@ gem 'rake'
 
 group :spec do
   gem 'bacon'
+  gem 'rubocop'
 end

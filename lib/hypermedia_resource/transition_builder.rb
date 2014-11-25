@@ -2,7 +2,6 @@ require 'hypermedia_resource/transition/input_property'
 
 class HypermediaResource
   class TransitionBuilder
-
     def initialize(transition_struct = nil)
       @internal_struct = transition_struct || TransitionStruct.new
     end
@@ -32,6 +31,7 @@ class HypermediaResource
     end
 
     private
+
     def add_property(type, name, options)
       @internal_struct[type][name] = InputProperty.new(name, options)
     end

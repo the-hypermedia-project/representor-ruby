@@ -4,11 +4,10 @@ class HypermediaResource
   ##
   # A canonical transition for introspecting a state transition in a resource.
   class Transition
-
     attr_reader :relation_type, :uri, :title, :description
 
     def initialize(relation_type, uri, options = {})
-      @relation_type, @uri= relation_type, uri
+      @relation_type, @uri = relation_type, uri
       @title = options[:title]
       @description = options[:description]
 
