@@ -1,6 +1,5 @@
 class HypermediaResource
   class ResourceBuilder
-
     def initialize(resource_struct = nil)
       @internal_struct = resource_struct || ResourceStruct.new
     end
@@ -82,5 +81,3 @@ ResourceStruct = Struct.new(:meta_links, :meta_data, :attibutes, :transitions, :
     self[:resources] = {}
   end
 end
-
-

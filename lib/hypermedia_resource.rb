@@ -51,7 +51,6 @@ require 'hypermedia_resource/resource_builder'
 #   person.first_name # =>
 #
 class HypermediaResource
-
   def initialize(resource_struct = nil)
     builder = ResourceBuilder.new(resource_struct)
     yield builder if block_given?
