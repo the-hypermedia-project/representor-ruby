@@ -1,4 +1,4 @@
-class HypermediaResource
+class Representor
   class ResourceBuilder
     def initialize(resource_struct = nil)
       @internal_struct = resource_struct || ResourceStruct.new
@@ -45,7 +45,7 @@ class HypermediaResource
     # Adds an embedded resource. Yields a resource builder.
     #
     def add_resource(name, &block)
-      @internal_struct[:resources][name] = HypermediaResource.new(&block)
+      @internal_struct[:resources][name] = Representor.new(&block)
     end
 
     ##
@@ -63,9 +63,9 @@ class HypermediaResource
     end
 
     ##
-    # @return [HypermediaResource] A Hypermedia resource instance associated with the current state of the builder.
+    # @return [Representor] A Hypermedia resource instance associated with the current state of the builder.
     def to_resource
-      HypermediaResource.new(to_struct)
+      Representor.new(to_struct)
     end
   end
 end

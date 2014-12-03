@@ -1,4 +1,4 @@
-require 'hypermedia_resource/resource_builder'
+require 'representor/resource_builder'
 
 ##
 # A canonical interface for introspecting a hypermedia message. A builder is used to construct the object
@@ -6,7 +6,7 @@ require 'hypermedia_resource/resource_builder'
 # generic hypermedia media types.
 #
 # @example
-#   my_resource = HypermediaResource.new do |builder|
+#   my_resource = Representor.new do |builder|
 #     builder.add_meta_link(:profile, 'http://alps.io/schema.org/ItemList')
 #
 #     builder.add_transition(:self, 'http://example.com/something')
@@ -50,7 +50,7 @@ require 'hypermedia_resource/resource_builder'
 #   person = people.first
 #   person.first_name # =>
 #
-class HypermediaResource
+class Representor
   def initialize(resource_struct = nil)
     builder = ResourceBuilder.new(resource_struct)
     yield builder if block_given?
@@ -89,7 +89,7 @@ class HypermediaResource
   ##
   # The separate resources embedded in the current resource.
   #
-  # @return [Hash of HypermediaResource] Any embedded resources keyed by name.
+  # @return [Hash of Representor] Any embedded resources keyed by name.
   def resources
     @resources ||= @internal_struct[:resources] || {}
   end
