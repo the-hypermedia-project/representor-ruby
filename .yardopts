@@ -1,0 +1,5 @@
+--title Representor for Ruby Documentation
+--verbose
+--no-private
+--output-dir ./yardoc
+'lib/**/*.rb' - '*.md'

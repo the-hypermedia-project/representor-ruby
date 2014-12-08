@@ -1,6 +1,6 @@
-require 'hypermedia_resource/transition_builder'
+require 'representor/transition_builder'
 
-class HypermediaResource
+class Representor
   ##
   # A canonical transition for introspecting a state transition in a resource.
   class Transition

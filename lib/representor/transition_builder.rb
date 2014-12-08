@@ -1,6 +1,6 @@
-require 'hypermedia_resource/transition/input_property'
+require 'representor/transition/input_property'
 
-class HypermediaResource
+class Representor
   class TransitionBuilder
     def initialize(transition_struct = nil)
       @internal_struct = transition_struct || TransitionStruct.new

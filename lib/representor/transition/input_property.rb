@@ -1,4 +1,4 @@
-class HypermediaResource
+class Representor
   class Transition
     ##
     # Defines a property of a transition related to values that can be input when invoking a transition.
