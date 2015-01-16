@@ -1,3 +1,5 @@
+require 'bundler/setup'
+
 desc 'Runs all the specs'
 
 begin
