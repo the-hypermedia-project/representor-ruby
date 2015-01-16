@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
     Making the generation and consumption of Hypermedia messages for multiple media types accessible to the Ruby masses.
   DESC
 
-  s.files         = `git ls-files`.split($/)
+  s.files         = Dir['lib/**/*.rb']
   s.require_paths = ['lib']
   s.executables   = s.files.grep(/^bin\//) { |f| File.basename(f) }
 

@@ -5,5 +5,3 @@ $LOAD_PATH.uniq!
 require 'rubygems'
 require 'rake'
 require 'representor'
-
-Dir['tasks/**/*.rake'].each { |rake| load rake }

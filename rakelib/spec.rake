@@ -6,7 +6,7 @@ begin
 
   require 'rubocop/rake_task'
   RuboCop::RakeTask.new(:rubocop) do |task|
-    task.patterns = %w(lib spec tasks Rakefile)
+    task.patterns = %w(lib spec rakelib Rakefile)
   end
 rescue LoadError
   # no rspec available
