@@ -2,7 +2,7 @@ require 'representor/transition_builder'
 
 class Representor
   ##
-  # A canonical transition for introspecting a state transition in a resource.
+  # A canonical transition for introspecting a state transition in a representor.
   class Transition
     attr_reader :relation_type, :uri, :title, :description
 

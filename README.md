@@ -13,7 +13,7 @@ comprehensive, but rather expose the initial interface from a ruby standpoint an
 how to use builders and some of the internal constructs.
 
 * [Representor](lib/representor.rb)
-* [Representor::ResourceBuilder](lib/representor/resource_builder.rb)
+* [Representor::RepresentorBuilder](lib/representor/representor_builder.rb)
 * [Representor::Transition](lib/representor/transition.rb)
 * [Representor::TransitionBuilder](lib/representor/transition_builder.rb)
 * [Representor::Transition::InputProperty](lib/representor/transition/input_property.rb)
